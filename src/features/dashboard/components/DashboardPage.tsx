@@ -28,7 +28,7 @@ export function DashboardPage() {
   }
 
   return (
-    <div className="space-y-5 sm:space-y-6">
+    <div className="space-y-4 sm:space-y-5">
       <WelcomeHeader />
 
       <OverviewGrid
@@ -38,12 +38,12 @@ export function DashboardPage() {
         examClearance={data.examClearance}
       />
 
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
+      <div className="grid gap-3.5 xl:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
         <AnnouncementsCard updates={data.updates} />
         <QuickActionsCard />
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-3.5 md:grid-cols-2">
         <PaymentSummaryCard summary={data.paymentSummary} />
         <CourseRegistrationCard registration={data.courseRegistration} />
       </div>

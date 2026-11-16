@@ -26,17 +26,17 @@ export function RecentPaymentsCard({
   return (
     <SectionCard
       title="Recent Payment Activity"
-      bodyClassName="flex flex-col px-5 py-4 sm:px-6 sm:py-5"
+      bodyClassName="flex flex-col px-4 py-3.5 sm:px-5 sm:py-4"
     >
       {payments.length === 0 ? (
-        <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 text-center">
-          <span className="flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eff5ff] to-[#dfeafa] text-navy-900">
-            <PortalIcon icon={ReceiptText} className="size-6" duotone />
+        <div className="flex flex-1 flex-col items-center justify-center px-4 py-8 text-center">
+          <span className="flex size-[52px] items-center justify-center rounded-2xl bg-gradient-to-br from-[#eff5ff] to-[#dfeafa] text-navy-900">
+            <PortalIcon icon={ReceiptText} className="size-[22px]" duotone />
           </span>
-          <p className="mt-3.5 text-[15px] font-bold text-navy-950">
+          <p className="mt-3 text-[14px] font-bold text-navy-950">
             No payment activity
           </p>
-          <p className="mt-1.5 max-w-sm text-[12.5px] leading-5 text-slate-500">
+          <p className="mt-1 max-w-sm text-[12px] leading-[18px] text-slate-500">
             Your payment transactions will appear here.
           </p>
         </div>
@@ -51,16 +51,16 @@ export function RecentPaymentsCard({
                 className="flex flex-col gap-2 py-3 first:pt-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between"
               >
                 <div className="min-w-0">
-                  <p className="text-[12.5px] font-semibold text-navy-950">
+                  <p className="text-[12px] font-semibold text-navy-950">
                     {payment.description}
                   </p>
-                  <p className="mt-0.5 font-mono text-[10px] text-slate-500">
+                  <p className="mt-0.5 font-mono text-[9.5px] text-slate-500">
                     {payment.reference}
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between gap-4 sm:justify-end">
-                  <span className="text-[12px] font-medium tabular-nums text-slate-600">
+                  <span className="text-[11.5px] font-medium tabular-nums text-slate-600">
                     {formatNaira(payment.amount)}
                   </span>
                   <Badge variant={status.variant}>{status.label}</Badge>

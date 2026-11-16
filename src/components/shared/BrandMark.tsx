@@ -27,22 +27,22 @@ export function BrandMark({
     >
       {isSidebar ? (
         <span className="min-w-0">
-          <span className="block text-[18px] font-extrabold leading-[1.22] tracking-[-0.02em] text-white">
+          <span className="block text-[17.5px] font-extrabold leading-[1.22] tracking-[-0.022em] text-white">
             Godfrey Okoye
             <br />
             University
           </span>
-          <span className="mt-3 flex items-center justify-center gap-2">
+          <span className="mt-2.5 flex items-center justify-center gap-2">
             <span
               aria-hidden="true"
-              className="h-px w-5 bg-gold-400/80"
+              className="h-px w-4 bg-gold-400/80"
             />
-            <span className="text-[8.5px] font-bold uppercase tracking-[0.24em] text-gold-200">
+            <span className="text-[8px] font-bold uppercase tracking-[0.24em] text-gold-200">
               Student Portal
             </span>
             <span
               aria-hidden="true"
-              className="h-px w-5 bg-gold-400/80"
+              className="h-px w-4 bg-gold-400/80"
             />
           </span>
         </span>
@@ -50,15 +50,15 @@ export function BrandMark({
         <>
           <span
             aria-hidden="true"
-            className="h-8 w-[3px] shrink-0 rounded-full bg-gold-400"
+            className="h-7 w-[3px] shrink-0 rounded-full bg-gold-400"
           />
           <span className="min-w-0">
-            <span className="block text-[16px] font-extrabold leading-[1.16] tracking-[-0.02em] text-navy-950 sm:text-[17px]">
+            <span className="block text-[15px] font-extrabold leading-[1.16] tracking-[-0.02em] text-navy-950 sm:text-[16px]">
               Godfrey Okoye
               <br />
               University
             </span>
-            <span className="mt-1 block text-[8px] font-bold uppercase tracking-[0.2em] text-navy-600">
+            <span className="mt-1 block text-[7.5px] font-bold uppercase tracking-[0.2em] text-navy-600">
               Student Portal
             </span>
           </span>

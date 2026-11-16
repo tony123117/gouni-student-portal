@@ -51,7 +51,7 @@ export function AppShell() {
         >
           <PortalBackdrop />
 
-          <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-1 flex-col px-3.5 pb-24 pt-3.5 sm:px-6 sm:pt-5 lg:px-10 lg:pb-8 lg:pt-9">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-1 flex-col px-3.5 pb-[84px] pt-3 sm:px-6 sm:pt-4 lg:px-10 lg:pb-7 lg:pt-8">
             <div className="flex-1">
               <Outlet />
             </div>

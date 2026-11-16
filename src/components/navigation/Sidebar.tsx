@@ -31,11 +31,11 @@ export function Sidebar({ onNavigate }: SidebarProps) {
       />
 
       <div className="relative z-10 flex h-full min-h-0 flex-col">
-        <div className="flex shrink-0 justify-center px-5 pb-8 pt-9">
+        <div className="flex shrink-0 justify-center px-4 pb-6 pt-7">
           <BrandMark variant="sidebar" onNavigate={onNavigate} />
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-3">
+        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-2.5">
           <SidebarNav onNavigate={onNavigate} />
         </div>
       </div>

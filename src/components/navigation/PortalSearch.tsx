@@ -109,7 +109,7 @@ export function PortalSearch({
       <div className="relative">
         <Search
           aria-hidden="true"
-          className="pointer-events-none absolute left-4 top-1/2 size-[19px] -translate-y-1/2 text-navy-600"
+          className="pointer-events-none absolute left-3.5 top-1/2 size-[18px] -translate-y-1/2 text-navy-600"
           strokeWidth={2.25}
         />
         <input
@@ -137,7 +137,7 @@ export function PortalSearch({
             }
           }}
           onKeyDown={handleKeyDown}
-          className="h-11 w-full rounded-xl border border-transparent bg-[#e9effa] pl-11 pr-10 text-[13.5px] font-medium text-navy-950 outline-none transition-colors placeholder:font-normal placeholder:text-slate-500 hover:bg-[#e2eaf7] focus:border-navy-300 focus:bg-white focus:ring-2 focus:ring-navy-100 lg:h-[50px] lg:text-[14px] [&::-webkit-search-cancel-button]:hidden"
+          className="h-11 w-full rounded-xl border border-transparent bg-[#e9effa] pl-10 pr-9 text-[13px] font-medium text-navy-950 outline-none transition-colors placeholder:font-normal placeholder:text-slate-500 hover:bg-[#e2eaf7] focus:border-navy-300 focus:bg-white focus:ring-2 focus:ring-navy-100 lg:h-[46px] lg:text-[13.5px] [&::-webkit-search-cancel-button]:hidden"
         />
         {query ? (
           <button
@@ -150,7 +150,7 @@ export function PortalSearch({
             aria-label="Clear search"
             className="absolute right-2 top-1/2 inline-flex size-7 -translate-y-1/2 items-center justify-center rounded-md text-slate-500 transition-colors hover:bg-navy-50 hover:text-navy-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600"
           >
-            <X aria-hidden="true" className="size-3.5" />
+            <X aria-hidden="true" className="size-3" />
           </button>
         ) : null}
       </div>
@@ -168,17 +168,17 @@ export function PortalSearch({
                     aria-selected={index === activeIndex}
                     onMouseEnter={() => setActiveIndex(index)}
                     onClick={() => selectTarget(target.to)}
-                    className={`flex w-full items-center justify-between gap-3 px-4 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-navy-600 ${
+                    className={`flex w-full items-center justify-between gap-3 px-3.5 py-2.5 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-navy-600 ${
                       index === activeIndex
                         ? 'bg-navy-50 text-navy-900'
                         : 'text-slate-700 hover:bg-portal-surface'
                     }`}
                   >
-                    <span className="truncate text-[13px] font-medium">
+                    <span className="truncate text-[12.5px] font-medium">
                       {target.label}
                     </span>
                     {target.group ? (
-                      <span className="shrink-0 text-[10px] font-medium uppercase tracking-[0.08em] text-slate-400">
+                      <span className="shrink-0 text-[9.5px] font-medium uppercase tracking-[0.08em] text-slate-400">
                         {target.group}
                       </span>
                     ) : null}

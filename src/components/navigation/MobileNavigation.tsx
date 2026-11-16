@@ -98,7 +98,7 @@ export function MobileNavigation({
         aria-label="Student menu"
         className="absolute inset-y-0 left-0 flex w-[20rem] max-w-[calc(100vw-2.5rem)] flex-col overflow-hidden bg-white shadow-[0_16px_40px_rgba(5,36,85,0.22)]"
       >
-        <div className="flex shrink-0 items-center justify-between gap-3 border-b border-portal-line px-4 py-4">
+        <div className="flex shrink-0 items-center justify-between gap-3 border-b border-portal-line px-3.5 py-3.5">
           <BrandMark onNavigate={onClose} />
           <button
             type="button"
@@ -107,35 +107,35 @@ export function MobileNavigation({
             aria-label="Close navigation menu"
             className="inline-flex size-10 shrink-0 items-center justify-center rounded-lg text-navy-800 transition-colors hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600"
           >
-            <PortalIcon icon={X} className="size-[19px]" />
+            <PortalIcon icon={X} className="size-[18px]" />
           </button>
         </div>
 
-        <div className="shrink-0 border-b border-portal-line bg-portal-surface px-4 py-3">
-          <div className="flex items-center gap-3">
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white">
-              <PortalIcon icon={User} className="size-[21px]" duotone />
+        <div className="shrink-0 border-b border-portal-line bg-portal-surface px-3.5 py-2.5">
+          <div className="flex items-center gap-2.5">
+            <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white">
+              <PortalIcon icon={User} className="size-[19px]" duotone />
             </span>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-[14px] font-bold text-navy-950">
+              <p className="truncate text-[13.5px] font-bold text-navy-950">
                 Student account
               </p>
-              <p className="truncate text-[11px] font-medium text-slate-500">
+              <p className="truncate text-[10.5px] font-medium text-slate-500">
                 Profile details unavailable
               </p>
             </div>
           </div>
         </div>
 
-        <div className="shrink-0 border-b border-portal-line px-4 py-2.5">
+        <div className="shrink-0 border-b border-portal-line px-3.5 py-2">
           <PortalSearch idPrefix="mobile" onNavigate={onClose} />
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
+        <div className="min-h-0 flex-1 overflow-y-auto px-2.5 py-2.5">
           <SidebarNav variant="mobile" onNavigate={onClose} />
         </div>
 
-        <div className="shrink-0 border-t border-portal-line px-4 py-4 text-[11px] leading-5 text-slate-500">
+        <div className="shrink-0 border-t border-portal-line px-3.5 py-3.5 text-[10.5px] leading-[18px] text-slate-500">
           <p className="font-semibold text-navy-900">Need help?</p>
           <p className="mt-0.5">Contact the ICT Help Desk.</p>
         </div>

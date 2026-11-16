@@ -56,7 +56,7 @@ export function MobileBottomNav() {
       aria-label="Primary mobile navigation"
       className="fixed inset-x-0 bottom-0 z-40 border-t border-portal-line bg-white pb-[env(safe-area-inset-bottom)] shadow-[0_-6px_18px_rgba(5,42,94,0.06)] lg:hidden"
     >
-      <div className="mx-auto grid h-[76px] max-w-md grid-cols-4">
+      <div className="mx-auto grid h-[72px] max-w-md grid-cols-4">
         {mobileNavigation.map((item) => {
           const active = item.isActive(pathname);
           const Icon = item.icon;
@@ -66,7 +66,7 @@ export function MobileBottomNav() {
               key={item.label}
               to={item.to}
               aria-current={active ? 'page' : undefined}
-              className={`relative flex flex-col items-center justify-center gap-1.5 text-[12px] font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-navy-600 ${
+              className={`relative flex flex-col items-center justify-center gap-1 text-[12px] font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-navy-600 ${
                 active
                   ? 'text-navy-950'
                   : 'text-slate-500 hover:text-navy-800'
@@ -74,7 +74,7 @@ export function MobileBottomNav() {
             >
               <PortalIcon
                 icon={Icon}
-                className={`size-[25px] ${
+                className={`size-[23px] ${
                   active ? 'text-navy-950' : 'text-slate-500'
                 }`}
                 strokeWidth={
@@ -86,7 +86,7 @@ export function MobileBottomNav() {
               {active ? (
                 <span
                   aria-hidden="true"
-                  className="absolute bottom-0 h-1 w-10 rounded-t-full bg-gold-400"
+                  className="absolute bottom-0 h-[3px] w-9 rounded-t-full bg-gold-400"
                 />
               ) : null}
             </Link>

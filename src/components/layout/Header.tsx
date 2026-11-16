@@ -16,7 +16,7 @@ export function Header({
 }: HeaderProps) {
   return (
     <header className="sticky top-0 z-30 border-b border-portal-line bg-white shadow-[0_1px_0_rgba(5,42,94,0.02)]">
-      <div className="flex h-[70px] items-center justify-between gap-3 px-3.5 sm:h-[80px] sm:px-6 lg:h-[104px] lg:gap-8 lg:px-10">
+      <div className="flex h-[66px] items-center justify-between gap-3 px-3.5 sm:h-[74px] sm:px-6 lg:h-[96px] lg:gap-8 lg:px-10">
         <div className="flex min-w-0 items-center lg:hidden">
           <BrandMark />
         </div>
@@ -25,12 +25,12 @@ export function Header({
           <PortalSearch />
         </div>
 
-        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5 lg:gap-5">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2.5 lg:gap-4">
           <NotificationMenu />
 
           <span
             aria-hidden="true"
-            className="hidden h-9 w-px bg-portal-line lg:block"
+            className="hidden h-8 w-px bg-portal-line lg:block"
           />
 
           <div className="hidden lg:block">
@@ -45,7 +45,7 @@ export function Header({
             aria-controls="mobile-navigation"
             className="inline-flex size-11 items-center justify-center rounded-lg text-navy-950 transition-colors hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 lg:hidden"
           >
-            <PortalIcon icon={Menu} className="size-[22px] text-navy-950" />
+            <PortalIcon icon={Menu} className="size-5 text-navy-950" />
           </button>
         </div>
       </div>

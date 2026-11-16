@@ -69,8 +69,8 @@ export function SidebarNav({
   };
 
   const itemClassName = (isActive: boolean, isGroup = false) =>
-    `relative flex items-center gap-3 rounded-lg px-3 text-[14.5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset ${
-      isMobile ? 'min-h-[44px]' : 'min-h-[50px]'
+    `relative flex items-center gap-2.5 rounded-lg px-3 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset ${
+      isMobile ? 'min-h-[44px]' : 'min-h-[46px]'
     } ${
       isMobile
         ? isActive
@@ -84,7 +84,7 @@ export function SidebarNav({
     }`;
 
   const iconClassName = (isActive: boolean) =>
-    `size-5 shrink-0 ${
+    `size-[18px] shrink-0 ${
       isMobile
         ? isActive
           ? 'text-navy-950'
@@ -133,7 +133,7 @@ export function SidebarNav({
   return (
     <nav
       aria-label={isMobile ? 'Mobile navigation' : 'Primary navigation'}
-      className="flex flex-col gap-1"
+      className="flex flex-col gap-0.5"
     >
       {primaryNavigation.map((item) => {
         if (!item.children) {
@@ -171,7 +171,7 @@ export function SidebarNav({
               <ChevronDown
                 aria-hidden="true"
                 strokeWidth={2.2}
-                className={`size-4 shrink-0 transition-transform ${
+                className={`size-[15px] shrink-0 transition-transform ${
                   isOpen ? 'rotate-180' : ''
                 } ${
                   isMobile
@@ -188,7 +188,7 @@ export function SidebarNav({
             {isOpen ? (
               <div
                 id={getGroupId(variant, item.label)}
-                className={`ml-4 mt-1 space-y-1 border-l pl-4 ${
+                className={`ml-3.5 mt-1 space-y-0.5 border-l pl-3 ${
                   isMobile ? 'border-portal-line' : 'border-white/10'
                 }`}
               >
@@ -201,7 +201,7 @@ export function SidebarNav({
                       to={child.to}
                       onClick={onNavigate}
                       className={({ isActive }) =>
-                        `flex min-h-[34px] items-center gap-2.5 rounded-md px-2 py-1.5 text-[13.5px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset ${
+                        `flex min-h-[32px] items-center gap-2 rounded-md px-2 py-1 text-[13px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset ${
                           isMobile
                             ? isActive
                               ? 'bg-portal-sky font-semibold text-navy-950 focus-visible:ring-navy-600'
@@ -214,7 +214,7 @@ export function SidebarNav({
                     >
                       <PortalIcon
                         icon={ChildIcon}
-                        className={`size-4 shrink-0 ${
+                        className={`size-[15px] shrink-0 ${
                           isMobile ? 'text-navy-600' : 'text-navy-300'
                         }`}
                         strokeWidth={child.duotone ? 2.1 : 2.4}

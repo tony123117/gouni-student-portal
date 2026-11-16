@@ -48,23 +48,23 @@ export function UserMenu() {
         aria-expanded={isOpen}
         aria-controls="account-menu"
         aria-label={isOpen ? 'Close account menu' : 'Open account menu'}
-        className="flex items-center gap-2.5 rounded-md py-1 pl-1 pr-1.5 text-left transition-colors hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2"
+        className="flex items-center gap-2 rounded-md py-1 pl-1 pr-1.5 text-left transition-colors hover:bg-navy-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2"
       >
-        <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
-          <PortalIcon icon={User} className="size-[21px]" duotone />
+        <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+          <PortalIcon icon={User} className="size-[19px]" duotone />
         </span>
         <span className="hidden min-w-0 lg:block">
           <span className="block max-w-44 truncate text-[15px] font-bold leading-4 text-navy-950">
             Student account
           </span>
-          <span className="mt-1.5 block max-w-44 truncate text-[11px] font-medium leading-3 text-slate-500">
+          <span className="mt-1 block max-w-44 truncate text-[10.5px] font-medium leading-3 text-slate-500">
             Profile unavailable
           </span>
         </span>
         <ChevronDown
           aria-hidden="true"
           strokeWidth={2.2}
-          className={`hidden size-[17px] text-navy-700 transition-transform lg:block ${
+          className={`hidden size-4 text-navy-700 transition-transform lg:block ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -74,23 +74,23 @@ export function UserMenu() {
         <div
           id="account-menu"
           aria-label="Account menu"
-          className="absolute right-0 z-50 mt-2 w-80 max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border border-portal-line bg-white shadow-[0_10px_30px_rgba(5,36,85,0.12)]"
+          className="absolute right-0 z-50 mt-1.5 w-80 max-w-[calc(100vw-2rem)] overflow-hidden rounded-xl border border-portal-line bg-white shadow-[0_10px_30px_rgba(5,36,85,0.12)]"
         >
-          <div className="border-b border-portal-line bg-portal-surface px-4 py-4">
-            <div className="flex items-center gap-3">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white">
-                <PortalIcon icon={User} className="size-[21px]" duotone />
+          <div className="border-b border-portal-line bg-portal-surface px-3.5 py-3.5">
+            <div className="flex items-center gap-2.5">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-white">
+                <PortalIcon icon={User} className="size-[19px]" duotone />
               </span>
               <div className="min-w-0">
-                <p className="truncate text-[15px] font-bold text-navy-950">
+                <p className="truncate text-[14px] font-bold text-navy-950">
                   Student account
                 </p>
-                <p className="mt-0.5 truncate text-[11.5px] font-medium text-slate-500">
+                <p className="mt-0.5 truncate text-[11px] font-medium text-slate-500">
                   Profile details unavailable
                 </p>
               </div>
             </div>
-            <p className="mt-3 text-[11px] leading-5 text-slate-500">
+            <p className="mt-2.5 text-[10.5px] leading-[18px] text-slate-500">
               Your profile information will appear here when it is available.
             </p>
           </div>
@@ -99,9 +99,9 @@ export function UserMenu() {
             <Link
               to={ROUTES.account}
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2.5 rounded-md px-3 py-2.5 text-[13.5px] font-semibold text-navy-800 transition-colors hover:bg-portal-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600"
+              className="flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-semibold text-navy-800 transition-colors hover:bg-portal-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600"
             >
-              <PortalIcon icon={User} className="size-[17px] text-navy-600" />
+              <PortalIcon icon={User} className="size-4 text-navy-600" />
               Account
             </Link>
           </div>

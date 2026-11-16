@@ -1,6 +1,6 @@
 export function WelcomeHeader() {
   return (
-    <section className="relative min-h-[184px] overflow-hidden rounded-2xl bg-navy-950 px-5 py-6 text-white shadow-[0_16px_36px_rgba(5,42,94,0.18)] sm:min-h-[196px] sm:px-7 sm:py-8 lg:min-h-0 lg:overflow-visible lg:rounded-none lg:bg-transparent lg:p-0 lg:text-navy-950 lg:shadow-none">
+    <section className="relative min-h-[184px] overflow-hidden rounded-2xl bg-navy-950 px-[18px] py-[22px] text-white shadow-[0_16px_36px_rgba(5,42,94,0.18)] sm:min-h-[196px] sm:px-6 sm:py-7 lg:min-h-0 lg:overflow-visible lg:rounded-none lg:bg-transparent lg:p-0 lg:text-navy-950 lg:shadow-none">
       <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl lg:hidden">
         <span
           aria-hidden="true"
@@ -43,15 +43,15 @@ export function WelcomeHeader() {
       </span>
 
       <div className="relative">
-        <h1 className="text-[30px] font-extrabold leading-[1.12] tracking-[-0.035em] sm:text-[34px] lg:text-[42px]">
+        <h1 className="text-[28px] font-extrabold leading-[1.12] tracking-[-0.035em] sm:text-[31px] lg:text-[38px]">
           Welcome back!
         </h1>
-        <p className="mt-2.5 max-w-[250px] text-[13.5px] font-medium leading-5 text-white/80 sm:max-w-sm sm:text-[14.5px] lg:mt-2.5 lg:max-w-xl lg:text-[15.5px] lg:font-semibold lg:leading-6 lg:text-navy-800">
+        <p className="mt-2 max-w-[240px] text-[12.5px] font-medium leading-[18px] text-white/80 sm:max-w-sm sm:text-[13.5px] lg:mt-2 lg:max-w-xl lg:text-[14.5px] lg:font-semibold lg:leading-[22px] lg:text-navy-800">
           Here&apos;s what&apos;s happening with your student account.
         </p>
         <span
           aria-hidden="true"
-          className="mt-4 block h-1 w-20 rounded-full bg-gold-400 sm:w-24 lg:mt-4 lg:w-32"
+          className="mt-3.5 block h-1 w-[72px] rounded-full bg-gold-400 sm:w-[84px] lg:mt-3.5 lg:w-36"
         />
       </div>
     </section>

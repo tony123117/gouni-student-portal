@@ -116,35 +116,35 @@ export function OverviewGrid({
 
   return (
     <section aria-label="Student overview">
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4 xl:gap-4">
+      <div className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-3.5">
         {items.map((item) => {
           const Icon = item.icon;
 
           return (
             <article
               key={item.label}
-              className="flex min-h-[108px] min-w-0 items-center gap-3.5 rounded-2xl border border-portal-line/90 bg-white px-3.5 py-4 shadow-[0_2px_12px_rgba(5,42,94,0.035)] sm:min-h-[110px] sm:px-4"
+              className="flex min-h-[100px] min-w-0 items-center gap-3 rounded-2xl border border-portal-line/90 bg-white px-3 py-3.5 shadow-[0_2px_12px_rgba(5,42,94,0.035)] sm:min-h-[102px] sm:px-3.5"
             >
-              <span className="flex size-[62px] shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eff5ff] via-[#e9f1fc] to-[#dfeafa] text-navy-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] ring-1 ring-white/70">
+              <span className="flex size-[56px] shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#eff5ff] via-[#e9f1fc] to-[#dfeafa] text-navy-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] ring-1 ring-white/70">
                 <PortalIcon
                   icon={Icon}
-                  className="size-[27px]"
+                  className="size-[25px]"
                   strokeWidth={item.duotone ? 2.2 : 2.5}
                   duotone={item.duotone}
                 />
               </span>
               <div className="min-w-0">
-                <p className="truncate text-[13.5px] font-bold leading-[18px] tracking-[0.005em] text-navy-700">
+                <p className="truncate text-[13px] font-bold leading-[17px] tracking-[0.005em] text-navy-700">
                   {item.label}
                 </p>
-                <p className="mt-1 flex items-center gap-2 text-[16.5px] font-extrabold leading-5 text-navy-950">
+                <p className="mt-0.5 flex items-center gap-2 text-[16px] font-extrabold leading-[18px] text-navy-950">
                   <span className="truncate">{item.value}</span>
                   <span
                     aria-hidden="true"
-                    className={`size-2.5 shrink-0 rounded-full ring-2 ring-white ${toneClasses[item.tone]}`}
+                    className={`size-[9px] shrink-0 rounded-full ring-2 ring-white ${toneClasses[item.tone]}`}
                   />
                 </p>
-                <p className="mt-1 truncate text-[12px] font-medium leading-4 text-slate-500">
+                <p className="mt-0.5 truncate text-[11.5px] font-medium leading-[15px] text-slate-500">
                   {item.detail}
                 </p>
               </div>

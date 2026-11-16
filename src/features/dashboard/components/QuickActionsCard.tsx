@@ -51,9 +51,9 @@ export function QuickActionsCard() {
   return (
     <SectionCard
       title="Quick Actions"
-      bodyClassName="flex flex-1 flex-col p-4 sm:p-5"
+      bodyClassName="flex flex-1 flex-col p-3.5 sm:p-4"
     >
-      <div className="grid flex-1 grid-cols-2 gap-3 sm:gap-3.5">
+      <div className="grid flex-1 grid-cols-2 gap-2.5 sm:gap-3">
         {quickActions.map((action) => {
           const Icon = action.icon;
 
@@ -61,18 +61,18 @@ export function QuickActionsCard() {
             <Link
               key={action.label}
               to={action.to}
-              className="group flex min-h-[118px] flex-col items-center justify-center gap-2.5 rounded-xl border border-[#dfe9f7] bg-[#eaf2fc] px-2.5 py-4 text-center transition-colors hover:border-navy-200 hover:bg-[#e2edfa] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:min-h-[126px]"
+              className="group flex min-h-[108px] flex-col items-center justify-center gap-2 rounded-xl border border-[#dfe9f7] bg-[#eaf2fc] px-2 py-3.5 text-center transition-colors hover:border-navy-200 hover:bg-[#e2edfa] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 sm:min-h-[116px]"
             >
               <PortalIcon
                 icon={Icon}
-                className="size-[27px] text-navy-950"
+                className="size-[25px] text-navy-950"
                 strokeWidth={action.duotone ? 2.2 : 2.5}
                 duotone={action.duotone}
               />
               <span className="text-[13.5px] font-bold leading-[1.2] text-navy-950">
                 {action.label}
               </span>
-              <span className="hidden text-[10.5px] font-medium leading-[1.35] text-slate-500 sm:block">
+              <span className="hidden text-[11px] font-medium leading-[1.35] text-slate-500 sm:block">
                 {action.description}
               </span>
             </Link>
