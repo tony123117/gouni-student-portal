@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Segoe UI Variable Text", "Segoe UI", ui-sans-serif, system-ui, -apple-system,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --color-navy-50: #f1f6fd;
+  --color-navy-100: #e2ecf9;
+  --color-navy-200: #c6dbf1;
+  --color-navy-300: #97bfe5;
+  --color-navy-400: #649dd5;
+  --color-navy-500: #3b7fc1;
+  --color-navy-600: #2064ac;
+  --color-navy-700: #12529a;
+  --color-navy-800: #0d4486;
+  --color-navy-900: #07356f;
+  --color-navy-950: #052a5e;
+
+  --color-gold-50: #fbf7ec;
+  --color-gold-100: #f6edd6;
+  --color-gold-200: #edddb1;
+  --color-gold-300: #dfc483;
+  --color-gold-400: #d2ad5c;
+  --color-gold-500: #bd9440;
+  --color-gold-600: #a17a32;
+  --color-gold-700: #81602b;
+  --color-gold-800: #684e28;
+  --color-gold-900: #574123;
+
+  --color-portal-surface: #f4f7fd;
+  --color-portal-line: #dbe6f3;
+  --color-portal-sky: #eaf1fb;
+  --color-portal-lavender: #e8effb;
+  --color-portal-ink: #062a5e;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-portal-surface font-sans text-navy-900 antialiased;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  ::selection {
+    background-color: var(--color-navy-200);
+    color: var(--color-navy-950);
+  }
+}
