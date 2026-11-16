@@ -4,6 +4,7 @@ import { ModulePlaceholder } from '@/components/shared/ModulePlaceholder';
 import { NotFoundPage } from '@/components/shared/NotFoundPage';
 import { ROUTES } from '@/constants';
 import { DashboardPage } from '@/features/dashboard/components/DashboardPage';
+import { PaymentHistoryPage } from '@/features/payments/components/PaymentHistoryPage';
 
 const relativePath = (path: string) => path.replace(/^\//, '');
 
@@ -22,13 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: relativePath(ROUTES.paymentHistory),
-        element: (
-          <ModulePlaceholder
-            title="Payment History"
-            description="Review your university payment records and verification status."
-            emptyMessage="Your payment history will appear here."
-          />
-        ),
+        element: <PaymentHistoryPage />,
       },
       {
         path: relativePath(ROUTES.generateInvoice),
