@@ -27,49 +27,49 @@ export function PaymentHistoryTable({
           <tr className="bg-portal-surface/65">
             <th
               scope="col"
-              className="w-[16%] px-3 py-2.5 pl-5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[15%] px-2 py-2.5 pl-4 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Invoice Number
             </th>
             <th
               scope="col"
-              className="w-[23%] px-3 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[22%] px-2 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Payment Description
             </th>
             <th
               scope="col"
-              className="w-[10%] px-3 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[10%] px-2 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Date
             </th>
             <th
               scope="col"
-              className="w-[11%] px-3 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[11%] px-2 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Amount
             </th>
             <th
               scope="col"
-              className="w-[12%] px-3 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[12%] px-2 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Academic Session
             </th>
             <th
               scope="col"
-              className="w-[10%] px-3 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[10%] px-2 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Semester
             </th>
             <th
               scope="col"
-              className="w-[9%] px-3 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[10%] px-2 py-2.5 text-left text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Status
             </th>
             <th
               scope="col"
-              className="w-[9%] px-3 py-2.5 pr-5 text-right text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
+              className="w-[10%] px-2 py-2.5 pr-4 text-right text-[9.5px] font-bold uppercase tracking-[0.1em] text-navy-600"
             >
               Actions
             </th>
@@ -81,7 +81,7 @@ export function PaymentHistoryTable({
               key={record.id}
               className="border-t border-portal-line/70 transition-colors hover:bg-portal-surface/45"
             >
-              <td className="min-w-0 px-3 py-3 pl-5 align-middle">
+              <td className="min-w-0 px-2 py-3 pl-4 align-middle">
                 <p className="truncate font-mono text-[11px] font-bold text-navy-950">
                   {record.invoiceNumber}
                 </p>
@@ -89,35 +89,35 @@ export function PaymentHistoryTable({
                   {record.paymentReference}
                 </p>
               </td>
-              <td className="min-w-0 px-3 py-3 align-middle">
+              <td className="min-w-0 px-2 py-3 align-middle">
                 <p className="line-clamp-2 text-[11.5px] font-semibold leading-[17px] text-navy-950">
                   {record.description}
                 </p>
               </td>
-              <td className="px-3 py-3 align-middle whitespace-nowrap">
+              <td className="px-2 py-3 align-middle whitespace-nowrap">
                 <span className="text-[11px] font-medium text-slate-600">
                   {formatPaymentDate(record.date)}
                 </span>
               </td>
-              <td className="px-3 py-3 align-middle whitespace-nowrap">
+              <td className="px-2 py-3 align-middle whitespace-nowrap">
                 <span className="text-[11.5px] font-bold tabular-nums text-navy-950">
                   {formatNaira(record.amount)}
                 </span>
               </td>
-              <td className="px-3 py-3 align-middle">
+              <td className="px-2 py-3 align-middle">
                 <span className="block truncate text-[11px] font-medium text-slate-600">
                   {record.academicSession || '—'}
                 </span>
               </td>
-              <td className="px-3 py-3 align-middle whitespace-nowrap">
+              <td className="px-2 py-3 align-middle whitespace-nowrap">
                 <span className="text-[11px] font-medium text-slate-600">
                   {PAYMENT_SEMESTER_LABELS[record.semester]}
                 </span>
               </td>
-              <td className="px-3 py-3 align-middle">
+              <td className="px-2 py-3 align-middle">
                 <PaymentStatusBadge status={record.status} />
               </td>
-              <td className="px-3 py-3 pr-5 align-middle">
+              <td className="px-2 py-3 pr-4 align-middle">
                 <div className="flex items-center justify-end gap-1">
                   <button
                     type="button"

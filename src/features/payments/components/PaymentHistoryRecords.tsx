@@ -1,6 +1,10 @@
 import { SectionCard } from '@/components/shared/SectionCard';
 import { Badge } from '@/components/ui/Badge';
-import type { PaymentHistoryFilters, PaymentHistorySnapshot, PaymentRecord } from '../types/payment-history';
+import type {
+  PaymentHistoryFilters,
+  PaymentHistorySnapshot,
+  PaymentRecord,
+} from '../types/payment-history';
 import { PaymentHistoryCards } from './PaymentHistoryCards';
 import { PaymentHistoryFilters as PaymentHistoryFilterBar } from './PaymentHistoryFilters';
 import {

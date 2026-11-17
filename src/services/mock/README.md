@@ -12,6 +12,9 @@ The dashboard fallback intentionally returns an unavailable snapshot:
 - `dashboard.ts` — no student identity, balances, courses, results, clearance
   status, announcements, or transactions. The dashboard renders its production
   empty states from this snapshot.
+- `payment-history.ts` — no invoices, payment references, amounts, statuses,
+  receipt links, or summary counts. The Payment History page renders its
+  unavailable state and reports that official records are not yet available.
 
 These adapters exist for local development only and never represent official
 university records.

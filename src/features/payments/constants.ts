@@ -37,6 +37,6 @@ export const PAYMENT_SEMESTER_FILTER_OPTIONS: Array<{
   label: string;
 }> = [
   { value: 'all', label: 'All semesters' },
-  { value: 'first', label: PAYMENT_SEMESTER_LABELS.first },
-  { value: 'second', label: PAYMENT_SEMESTER_LABELS.second },
+  { value: 'first', label: 'First' },
+  { value: 'second', label: 'Second' },
 ];
