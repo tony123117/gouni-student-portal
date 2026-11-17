@@ -4,6 +4,7 @@ import { ModulePlaceholder } from '@/components/shared/ModulePlaceholder';
 import { NotFoundPage } from '@/components/shared/NotFoundPage';
 import { ROUTES } from '@/constants';
 import { DashboardPage } from '@/features/dashboard/components/DashboardPage';
+import { GenerateInvoicePage } from '@/features/payments/components/GenerateInvoicePage';
 import { PaymentHistoryPage } from '@/features/payments/components/PaymentHistoryPage';
 
 const relativePath = (path: string) => path.replace(/^\//, '');
@@ -27,13 +28,7 @@ export const router = createBrowserRouter([
       },
       {
         path: relativePath(ROUTES.generateInvoice),
-        element: (
-          <ModulePlaceholder
-            title="Generate Invoice"
-            description="Generate an invoice for an outstanding university payment."
-            emptyMessage="Invoice details will appear here when they are available."
-          />
-        ),
+        element: <GenerateInvoicePage />,
       },
       {
         path: relativePath(ROUTES.uploadTeller),
