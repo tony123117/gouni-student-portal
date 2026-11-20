@@ -3,6 +3,7 @@ import type {
   PaymentSemester,
   PaymentStatus,
 } from './types/payment-history';
+import type { TellerReviewStatus } from './types/teller';
 
 export const DEFAULT_PAYMENT_HISTORY_FILTERS: PaymentHistoryFilters = {
   query: '',
@@ -40,3 +41,23 @@ export const PAYMENT_SEMESTER_FILTER_OPTIONS: Array<{
   { value: 'first', label: 'First' },
   { value: 'second', label: 'Second' },
 ];
+
+export const TELLER_REVIEW_STATUS_LABELS: Record<TellerReviewStatus, string> = {
+  submitted: 'Submitted',
+  under_review: 'Under Review',
+  verified: 'Verified',
+  rejected: 'Rejected',
+};
+
+/**
+ * Technical upload defaults used only while the university has not supplied
+ * official requirements. The UI labels these as technical limits — they are
+ * never presented as university policy.
+ */
+export const TELLER_TECHNICAL_ACCEPTED_FILE_TYPES = [
+  'application/pdf',
+  'image/jpeg',
+  'image/png',
+] as const;
+
+export const TELLER_TECHNICAL_MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024;

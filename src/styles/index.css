@@ -55,7 +55,8 @@
   }
 }
 
-.invoice-print-sheet {
+.invoice-print-sheet,
+.results-print-sheet {
   display: none;
 }
 
@@ -71,11 +72,16 @@
     background: #ffffff !important;
   }
 
-  body > :not(.invoice-print-sheet) {
+  body > :not(.invoice-print-sheet):not(.results-print-sheet) {
     display: none !important;
   }
 
   .invoice-print-sheet {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .results-print-sheet {
     display: block !important;
     width: 100% !important;
   }
@@ -88,14 +94,18 @@
     box-shadow: none !important;
   }
 
-  .invoice-print-sheet * {
+  .invoice-print-sheet *,
+  .results-print-sheet * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
   .invoice-print-sheet tr,
   .invoice-print-sheet td,
-  .invoice-print-sheet th {
+  .invoice-print-sheet th,
+  .results-print-sheet tr,
+  .results-print-sheet td,
+  .results-print-sheet th {
     break-inside: avoid;
   }
 }

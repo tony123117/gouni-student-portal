@@ -1,11 +1,12 @@
 # GOUNI Student Portal
 
 Frontend for the **Godfrey Okoye University Student Portal**. This build
-contains the responsive application shell and a production-style student
-dashboard. Authentication, live university integrations, payments, and the
-remaining feature modules have not been implemented yet, so unavailable
-information is presented through loading, empty, and error states rather than
-invented student records.
+contains the responsive application shell, dashboard, payment-history,
+invoice-generation, teller-upload, course-registration, academic-results, and
+exam-clearance experiences. Authentication and live university integrations
+have not been implemented yet, and hostel and account remain placeholders, so
+unavailable information is presented through loading, empty, and error states
+rather than invented student records.
 
 ## Technology stack
 
@@ -118,17 +119,66 @@ src/
   Domain operations belong in `src/services/supabase/`; components must not
   import the client directly.
 - **Development fallback:** `src/services/mock/` holds local adapters that
-  satisfy the same contracts as live services. The dashboard fallback returns
-  an unavailable snapshot with no student identity or records, so the UI only
-  renders empty states. UI code is never coupled to mock data.
+  satisfy the same contracts as live services. The dashboard, payment,
+  registration, results, and exam-clearance fallbacks return unavailable
+  snapshots with no student identity, records, scores, grades, requirements,
+  amounts, deadlines, documents, or clearance verdicts, so the UI only renders
+  empty states. UI code is never coupled to mock data.
 - **Switching implementations:** `selectAdapter` in
   `src/services/adapters/index.ts` chooses the mock or live factory based on
   `VITE_USE_MOCK_API`. Features own the contracts and both implementations.
 
-The dashboard feature is implemented under `src/features/dashboard/` with
-components, a query hook, service contract, and types. The remaining feature
-folders still contain placeholders only. All non-dashboard routes render a
-student-facing empty state rather than a working module.
+The dashboard feature is implemented under `src/features/dashboard/`. Payment
+History, Generate Invoice, and Upload Teller are implemented under
+`src/features/payments/`, Course Registration under
+`src/features/course-registration/`, Academic Results under
+`src/features/results/`, and Exam Clearance under
+`src/features/exam-clearance/`. Each feature owns its components, query hooks,
+typed service contract, and mock/live adapters. Hostel and Account still
+contain placeholders only.
+
+### Implemented modules
+
+| Route | Module | Live data status |
+| --- | --- | --- |
+| `/` | Dashboard | University API not connected; unavailable states |
+| `/payments/history` | Payment History | University API not connected; unavailable states |
+| `/payments/generate-invoice` | Generate Invoice | University API not connected; unavailable states |
+| `/payments/upload-teller` | Upload Teller | University evidence contract not connected; submissions fail honestly |
+| `/course-registration` | Course Registration | University registration contract not connected; unavailable states |
+| `/results` | Academic Results | University results contract not connected; unavailable states |
+| `/exam-clearance` | Exam Clearance | University clearance contract not connected; unavailable states |
+
+Course Registration renders only the academic term, student details,
+eligibility, catalogue, credit-unit rules, statuses, and history supplied by
+the service. Missing rules stay missing: eligibility is never assumed, credit
+limits are never invented, prerequisites are never evaluated in the browser,
+and submission is offered only when the service enables it and returns an
+eligible verdict. A successful response is presented as **Registration
+received**, not as approval. Confirmation documents appear only when the
+service supplies them.
+
+Academic Results renders only the periods, academic context, publication
+information, course results, and summaries supplied by the university. GPA,
+CGPA, registered and earned units, pass/fail counts, outstanding courses, and
+academic standing are displayed only when the service returns them; the portal
+never calculates them or infers pass/fail, grades, or score boundaries. Optional
+CA, exam, total, grade, grade-point, remark, and result-status fields remain
+missing when not supplied, and table columns appear only when at least one
+result provides that field. Unpublished periods are explained rather than
+rendered as empty results. Printing produces a clearly labelled portal printout,
+not an official transcript; statement download is offered only when an
+authenticated university document exists.
+
+Exam Clearance renders only the overall verdict, examination eligibility,
+counts, academic context, and backend-determined requirements supplied by the
+university. Eligibility and clearance are never inferred from visible
+completion states or requirement statuses; a missing verdict stays
+**Not supplied**. Requirement filters are built from returned status labels and
+categories, actions open only service-supplied HTTPS destinations, and
+supporting documents are retrieved through authenticated downloads. A
+successful clearance request is presented as a receipt only: the portal never
+claims that the student is cleared, approved, or eligible for examinations.
 
 ### Interface shell
 
@@ -160,8 +210,12 @@ notification service is available.
   competing student database or schema has been created.
 - Supabase schema, row-level security, and authentication strategy will be
   decided after reviewing requirements and the university's backend.
-- No student records, successful transactions, credentials, or API endpoints
-  are included. Unavailable dashboard data is represented by empty states, and
-  a load failure shows a retryable error state.
-- The shell and dashboard are the only implemented UI. Every other navigation
-  destination shows an empty state until that module is authorized and built.
+- No student records, successful transactions, results, scores, grades, GPA
+  values, clearance verdicts, examination eligibility, requirements, amounts,
+  deadlines, credentials, or API endpoints are included. Mock payment,
+  registration, results, and exam-clearance services return no official
+  records, and load failures show retryable error states.
+- Implemented experiences are the shell, dashboard, Payment History, Generate
+  Invoice, Upload Teller, Course Registration, Academic Results, and Exam
+  Clearance. Hostel and Account remain placeholders until authorized and
+  built.

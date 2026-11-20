@@ -4,8 +4,12 @@ import { ModulePlaceholder } from '@/components/shared/ModulePlaceholder';
 import { NotFoundPage } from '@/components/shared/NotFoundPage';
 import { ROUTES } from '@/constants';
 import { DashboardPage } from '@/features/dashboard/components/DashboardPage';
+import { CourseRegistrationPage } from '@/features/course-registration/components/CourseRegistrationPage';
+import { ExamClearancePage } from '@/features/exam-clearance/components/ExamClearancePage';
+import { ResultsPage } from '@/features/results/components/ResultsPage';
 import { GenerateInvoicePage } from '@/features/payments/components/GenerateInvoicePage';
 import { PaymentHistoryPage } from '@/features/payments/components/PaymentHistoryPage';
+import { UploadTellerPage } from '@/features/payments/components/UploadTellerPage';
 
 const relativePath = (path: string) => path.replace(/^\//, '');
 
@@ -32,43 +36,19 @@ export const router = createBrowserRouter([
       },
       {
         path: relativePath(ROUTES.uploadTeller),
-        element: (
-          <ModulePlaceholder
-            title="Upload Teller"
-            description="Submit your bank teller for payment verification."
-            emptyMessage="Your teller submissions will appear here."
-          />
-        ),
+        element: <UploadTellerPage />,
       },
       {
         path: relativePath(ROUTES.courseRegistration),
-        element: (
-          <ModulePlaceholder
-            title="Course Registration"
-            description="Review and manage your semester course registration."
-            emptyMessage="Your registered courses will appear here."
-          />
-        ),
+        element: <CourseRegistrationPage />,
       },
       {
         path: relativePath(ROUTES.results),
-        element: (
-          <ModulePlaceholder
-            title="Results"
-            description="View your published semester results."
-            emptyMessage="Your semester results will appear here."
-          />
-        ),
+        element: <ResultsPage />,
       },
       {
         path: relativePath(ROUTES.examClearance),
-        element: (
-          <ModulePlaceholder
-            title="Exam Clearance"
-            description="Check your eligibility for semester examinations."
-            emptyMessage="Your exam clearance status will appear here."
-          />
-        ),
+        element: <ExamClearancePage />,
       },
       {
         path: relativePath(ROUTES.hostel),

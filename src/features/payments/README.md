@@ -1,6 +1,6 @@
 # Payments
 
-The payments feature contains two independent modules that share the portal's
+The payments feature contains three independent modules that share the portal's
 architecture and formatting utilities:
 
 `components → hooks → services → adapters`
@@ -40,6 +40,43 @@ architecture and formatting utilities:
   and selection/error/unavailable states.
 - `components/InvoicePrintSheet.tsx` — body-level print copy. The print
   stylesheet hides the application shell and prints only the invoice document.
+
+## Upload Teller
+
+- `types/teller.ts` — submission context, form options, upload constraints,
+  invoice association options, review statuses, submission request/result,
+  history records, and the `TellerService` contract.
+- `validation/teller-submission.ts` — Zod schema factory + React Hook Form
+  resolver. Fields become required only when the university requires them.
+- `services/teller-service.ts` — selects the mock or live implementation
+  independently from the other payment modules.
+- `services/teller-live.ts` — intentionally disconnected. Documents the pending
+  server-side security requirements (private storage, server-side validation,
+  authorization) in its header.
+- `hooks/useTellerContext.ts` — loads official options, requirements,
+  constraints, associable invoices, and submission history.
+- `hooks/useTellerSubmission.ts` — submission query keyed by request plus a
+  submission counter; the evidence file travels through a ref and is never
+  placed in a query key or persisted.
+- `components/` — submission form (payment details + evidence upload),
+  guidance card, accessible file upload with remove/replace, submission
+  history, status badge, skeleton, and availability/error/success states.
+
+### Data rules
+
+- Options, invoices, history, and statuses are only ever rendered when the
+  service supplies them.
+- The mock adapter returns an unavailable context with no invoices, options,
+  history, or official upload limits, and `submitTeller` fails honestly rather
+  than faking an upload.
+- Success wording confirms receipt only: "Your payment evidence has been
+  submitted and is awaiting verification." A payment is never reported as
+  successful, verified, or confirmed unless the authorised service explicitly
+  returns that status.
+- File validation is client-side for usability only; server-side validation of
+  type, size, and content remains a pending university requirement.
+- The maximum file size shown without an official university limit is labelled
+  as a technical limit, not university policy.
 
 ## Data rules
 

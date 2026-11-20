@@ -23,6 +23,7 @@ Guidelines:
   directly.
 - UI must not assume mock data exists. The mock/live choice belongs in the
   service adapter layer.
-- The `dashboard` feature is implemented as the reference structure. The other
-  feature folders remain placeholders; authentication, payments, and the
-  remaining modules are not implemented.
+- `dashboard`, `payments`, `course-registration`, `results`, and
+  `exam-clearance` are implemented. `auth`, `hostel`, and `account` remain
+  placeholders; authentication and live university integrations are not
+  implemented.
